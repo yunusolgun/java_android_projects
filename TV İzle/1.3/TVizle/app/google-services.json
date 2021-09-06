@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "843006045574",
+    "firebase_url": "https://tv-izle-fdcda.firebaseio.com",
+    "project_id": "tv-izle-fdcda",
+    "storage_bucket": "tv-izle-fdcda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843006045574:android:0b81ee05053c589d",
+        "android_client_info": {
+          "package_name": "com.robusttech.tvizle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843006045574-injq8v7lps0soueak4uo43pe9r3rv1ia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_M_Nu6MrbBfATxVyyw2w_PUPW4awTxTA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

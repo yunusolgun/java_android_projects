@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="@drawable/background"
+    tools:context="com.example.yunusolgun.bitcoin1.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        tools:background="@drawable/back">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:text="BITCOIN"
+            android:textColor="@android:color/black"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="13dp"
+            android:text="Bitcoin Türkiye Piyasası"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/textView3"
+            android:clickable="true"
+            android:onClick="getAgain"
+            app:srcCompat="@drawable/bitcoin2" />
+
+        <ImageView
+            android:id="@+id/bitcoinImageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/coin"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/imageView2" />
+
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.07"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:padding="10dp"
+        android:rowCount="3"
+        tools:background="@drawable/background">
+
+        <!--row 1 , column1 , BTCTURK -->
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_rowWeight="1"
+            android:onClick="getAgain"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+
+            <ImageView
+                android:id="@+id/imageViewBtcturk"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/btcturk" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewBtcturk1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="55dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewEnDusukBtcturk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textViewBtcturk1"
+                    android:layout_marginTop="30dp"
+                    android:text="En düşük"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textViewBtcturk2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/textViewBtcturk1"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewEnYuksekBtcturk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textViewEnDusukBtcturk"
+                    android:layout_marginTop="10dp"
+                    android:text="En Yüksek"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textViewBtcturk3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/textViewBtcturk2"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewBtcturkHacim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textViewEnYuksekBtcturk"
+                    android:layout_marginTop="10dp"
+                    android:text="Hacim"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textViewBtcturk4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/textViewBtcturk3"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <!--row 1 , column1 , KOINEKS -->
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_rowWeight="1"
+            android:onClick="getAgain"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+
+            <ImageView
+                android:id="@+id/imageViewKoineks"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/koineks" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewKoineks1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="55dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewEnDusukKoineks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textViewKoineks1"
+                    android:layout_marginTop="30dp"
+                    android:text="En düşük"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textViewKoineks2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/textViewKoineks1"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewEnYuksekKoineks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textViewEnDusukKoineks"
+                    android:layout_marginTop="10dp"
+                    android:text="En Yüksek"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textViewKoineks3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/textViewKoineks2"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewKoineksHacim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textViewEnYuksekKoineks"
+                    android:layout_marginTop="10dp"
+                    android:text="Hacim"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textViewKoineks4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/textViewKoineks3"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <!--row 1 , column1 , PARIBU -->>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_rowWeight="1"
+            android:onClick="getAgain"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+
+            <ImageView
+                android:id="@+id/imageViewParibu"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/paribu" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewParibu1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="55dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewEnDusukParibu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textViewParibu1"
+                    android:layout_marginTop="30dp"
+                    android:text="En düşük"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textViewParibu2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/textViewParibu1"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewEnYuksekParibu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textViewEnDusukParibu"
+                    android:layout_marginTop="10dp"
+                    android:text="En Yüksek"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textViewParibu3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/textViewParibu2"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewParibuHacim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textViewEnYuksekParibu"
+                    android:layout_marginTop="10dp"
+                    android:text="Hacim"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textViewParibu4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/textViewParibu3"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <!--row 1 , column1 , KOINUM -->
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_rowWeight="1"
+            android:onClick="getAgain"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+
+            <ImageView
+                android:id="@+id/imageViewKoinim"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/koinim" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewKoinim1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="55dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewEnDusukKoinim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textViewKoinim1"
+                    android:layout_marginTop="30dp"
+                    android:text="En düşük"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textViewKoinim2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/textViewKoinim1"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewEnYuksekKoinim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textViewEnDusukKoinim"
+                    android:layout_marginTop="10dp"
+                    android:text="En Yüksek"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textViewKoinim3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/textViewKoinim2"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewKoinimHacim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textViewEnYuksekKoinim"
+                    android:layout_marginTop="10dp"
+                    android:text="Hacim"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textViewKoinim4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/textViewKoinim3"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+    </GridLayout>
+
+</LinearLayout>

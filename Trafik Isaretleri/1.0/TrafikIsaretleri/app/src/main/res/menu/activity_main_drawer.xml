@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_test"
+            android:icon="@drawable/ic_car"
+            android:title="Teste Başla" />
+        <item
+            android:id="@+id/nav_uyari"
+            android:icon="@drawable/ic_traffic"
+            android:title="Tehlike Uyarı İşaretleri" />
+        <item
+            android:id="@+id/nav_tanzim"
+            android:icon="@drawable/ic_traffic"
+            android:title="Trafik Tanzim İşaretleri" />
+        <item
+            android:id="@+id/nav_bilgi"
+            android:icon="@drawable/ic_traffic"
+            android:title="Bilgi İşaretleri" />
+        <item
+            android:id="@+id/nav_parketme"
+            android:icon="@drawable/ic_traffic"
+            android:title="Durma ve Parketme İşaretleri" />
+        <item
+            android:id="@+id/nav_yatay"
+            android:icon="@drawable/ic_traffic"
+            android:title="Yatay İşaretleme" />
+        <item
+            android:id="@+id/nav_yeniisaretler"
+            android:icon="@drawable/ic_traffic"
+            android:title="Yeni İşaretler" />
+        <item
+            android:id="@+id/nav_ayarlar"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Ayarlar" />
+    </group>
+
+
+    <!-- This is a comment
+
+    <item android:title="Haberleşme">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Paylaş" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Gönder" />
+        </menu>
+    </item>
+
+    -->
+
+</menu>
